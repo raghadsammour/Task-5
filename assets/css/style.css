@@ -109,13 +109,10 @@
 .section-photo {
     .card {
         background-color: #DEDCDB80;
-        /* padding: 32px; */
         width: 345px;
         p {
             font-size: 18px;
             line-height: 27.5px;
-            /* padding-top: 8px; */
-            /* padding-bottom: 27px; */
         }
     }
     img {
@@ -175,15 +172,6 @@
     background-color: #F6F6F6;
 }
 
-.grid-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.grid-item {
-    padding: 45px;
-}
-
 .caption h5 {
     padding-top: 8px;
     font-size: 18px;
@@ -238,17 +226,8 @@ footer {
     padding-top: 40px;
 }
 
-.carousel-iner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
-}
-
 .cards>div {
     padding: 32px;
-}
-
-.carousel-iner {
-    gap: 15px;
 }
 
 .cards .caption .discription {
