@@ -100,6 +100,12 @@
     }
 }
 
+.sec {
+    div img {
+        width: 450px;
+    }
+}
+
 .section-photo {
     .card {
         background-color: #DEDCDB80;
@@ -135,6 +141,18 @@
     img {
         width: 129px;
     }
+}
+
+.radio-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel .carousel-indicators button {
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .carousel-indicators button.active {
@@ -214,6 +232,65 @@ footer {
         max-width: 189px;
         padding-bottom: 72px;
     }
+}
+
+.radio-button {
+    padding-top: 40px;
+}
+
+.carousel-iner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.cards>div {
+    padding: 32px;
+}
+
+.carousel-iner {
+    gap: 15px;
+}
+
+.cards .caption .discription {
+    font-size: 14px !important;
+    color: #272D38 !important;
+    line-height: 130% !important;
+}
+
+.cards .caption .name {
+    font-size: 18px !important;
+    color: #272D38 !important;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio-button {
+    height: 10px;
+    z-index: 3;
+}
+
+label::before {
+    content: "";
+    display: grid;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #8EADD5;
+    background-color: transparent;
+    margin-left: 12px;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: #8EADD5;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width:1200px) {
@@ -296,4 +373,45 @@ footer {
     .footer-p {
         margin: 0 auto;
     }
+}
+
+.carousel-contain {
+    overflow: hidden;
+}
+
+.carousel-inler {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.cardss {
+    width: calc(100% / 3.1);
+    flex-shrink: 0;
+    background: #eee;
+    text-align: center;
+    font-size: 24px;
+}
+
+.radio-button:has(#radio1:checked)~.carousel-contain .carousel-inler {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+
+.radio-button:has(#radio2:checked)~.carousel-contain .carousel-inler {
+    transform: translateX(-33.333%);
+    -webkit-transform: translateX(-33.333%);
+    -moz-transform: translateX(-33.333%);
+    -ms-transform: translateX(-33.333%);
+    -o-transform: translateX(-33.333%);
+}
+
+.radio-button:has(#radio3:checked)~.carousel-contain .carousel-inler {
+    transform: translateX(-66.666%);
+    -webkit-transform: translateX(-66.666%);
+    -moz-transform: translateX(-66.666%);
+    -ms-transform: translateX(-66.666%);
+    -o-transform: translateX(-66.666%);
 }
